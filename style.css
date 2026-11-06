@@ -362,3 +362,83 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
 }
+/* What I Do Best - Unified Boxed Layout */
+.best-boxed-section {
+  margin: 40px 0;
+}
+
+.best-single-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.best-single-card h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 28px 0;
+  border-bottom: none;
+  padding-bottom: 0;
+  color: #0f172a;
+}
+
+.best-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.best-item {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.best-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.best-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.best-item-header h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.best-item p {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Icon Badges */
+.best-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+.icon-yellow { background: #fef3c7; color: #d97706; }
+.icon-blue   { background: #e0f2fe; color: #0284c7; }
+.icon-purple { background: #f3e8ff; color: #9333ea; }
+.icon-green  { background: #dcfce7; color: #16a34a; }
