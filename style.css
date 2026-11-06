@@ -51,3 +51,63 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
 .hc .ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--c);margin-bottom:22px}
 .hc h4{margin:0 0 10px;font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-size:23px;line-height:1.25}.hc p{margin:0;color:var(--mut);font-size:17px;line-height:1.7}
 .howtag{margin:32px 0 0;font-size:18px;max-width:40em}
+/* How I Work Boxed Card */
+.how-i-work-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.how-i-work-card h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.how-i-work-card .subhead {
+  color: var(--muted, #6e6e73);
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 40px;
+}
+
+@media (max-width: 640px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.work-item .icon {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: monospace;
+  margin-bottom: 8px;
+  color: var(--text, #1c1c1e);
+}
+
+.work-item h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text, #1c1c1e);
+}
+
+.work-item p {
+  color: var(--muted, #6e6e73);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
