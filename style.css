@@ -442,3 +442,34 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
 .icon-blue   { background: #e0f2fe; color: #0284c7; }
 .icon-purple { background: #f3e8ff; color: #9333ea; }
 .icon-green  { background: #dcfce7; color: #16a34a; }
+/* Global Section Alignment & Spacing Fix */
+main, 
+section, 
+.hero, 
+#projects, 
+#experience, 
+#recommendations, 
+#what-i-do-best {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Ensure Project & Experience Cards don't bleed out */
+.proj, 
+.exp-item, 
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Add breathing room between major sections */
+section {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
