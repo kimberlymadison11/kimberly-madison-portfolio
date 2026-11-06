@@ -247,3 +247,101 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
 }
   margin: 0;
 }
+/* What I Do Best - Grid & Hover Cards */
+.best-section {
+  margin: 48px 0;
+}
+
+.best-section h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.best-section .subhead {
+  color: var(--muted, #64748b);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.best-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .best-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.best-card {
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Slight Zoom Animation on Hover */
+.best-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.best-card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.best-card h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Subtle Text Scale Effect */
+.best-card:hover h3,
+.best-card:hover p {
+  transform: scale(1.01);
+}
+
+.best-card p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Distinct Card Accent Backgrounds & Text Colors */
+.card-blue {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+.card-blue h3 { color: #0369a1; }
+.card-blue p { color: #1e3a8a; }
+
+.card-purple {
+  background: #faf5ff;
+  border-color: #e9d5ff;
+}
+.card-purple h3 { color: #6b21a8; }
+.card-purple p { color: #4c1d95; }
+
+.card-amber {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+.card-amber h3 { color: #92400e; }
+.card-amber p { color: #78350f; }
+
+.card-green {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+.card-green h3 { color: #15803d; }
+.card-green p { color: #14532d; }
