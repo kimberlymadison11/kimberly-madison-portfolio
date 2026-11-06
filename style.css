@@ -12,7 +12,26 @@ p{margin:0 0 22px}
 h1{font-size:clamp(34px,5.2vw,54px);line-height:1.12;margin:0 0 28px;font-weight:800}
 .lead{font-size:20px;color:var(--mut);max-width:34em;margin:0 0 32px}
 .btn{display:inline-block;background:var(--ink);color:var(--bg);padding:14px 24px;border-radius:8px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:600;margin:0 14px 14px 0}.btn.o{background:none;color:var(--ink);border:1.5px solid var(--ink)}
-.dots{display:grid;grid-template-columns:repeat(10,1fr);gap:10px;max-width:380px}.dots i{aspect-ratio:1;border-radius:50%;display:block}
+.hero-visual-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.dots {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.dots i {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: block;
+}
 .g{background:var(--g)}.y{background:var(--y)}.r{background:var(--r)}
 .cap{font-size:15px;color:var(--mut);margin-top:18px;max-width:380px;line-height:1.6}
 .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 4px 0 10px}
