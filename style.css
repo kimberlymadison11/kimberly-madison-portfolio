@@ -43,3 +43,11 @@ blockquote.feature{font-size:22px;color:var(--ink);margin:0 0 36px;padding:4px 0
 Forest:  --bg:#fcfcfa;--card:#f3f5f1;--ink:#1d2a24;--mut:#5b6a62;--line:#e1e6df;--ac:#2d6a4f
 Plum:    --bg:#fdfcfd;--card:#f6f3f7;--ink:#2a2130;--mut:#675d6e;--line:#e8e2ea;--ac:#7a3e9d
 Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;--ac:#111111 */
+
+.how{margin-top:88px}.how h3{margin:0 0 10px;font-size:30px}.howsub{color:var(--mut);margin:0 0 36px;font-size:19px}
+.hgrid{display:grid;gap:24px}@media(min-width:720px){.hgrid{grid-template-columns:1fr 1fr}}
+.c1{--c:#2f5bea}.c2{--c:#0e9aa8}.c3{--c:#2e9d6a}.c4{--c:#e0892a}
+.hc{background:color-mix(in srgb,var(--c) 10%,var(--bg));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line));border-radius:18px;padding:36px 32px}
+.hc .ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--c);margin-bottom:22px}
+.hc h4{margin:0 0 10px;font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-size:23px;line-height:1.25}.hc p{margin:0;color:var(--mut);font-size:17px;line-height:1.7}
+.howtag{margin:32px 0 0;font-size:18px;max-width:40em}
