@@ -155,5 +155,95 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
   color: var(--muted, #6e6e73);
   font-size: 0.95rem;
   line-height: 1.5;
+  /* Boxed Recommendations Section */
+.boxed-rec-section {
+  margin: 48px 0;
+}
+
+.boxed-rec-section .boxed-card {
+  background: #f8fafc; /* Adds a warm, light blue-grey background */
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.boxed-rec-section h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  color: #0f172a;
+  border: none;
+  padding: 0;
+}
+
+.boxed-rec-section .sub-intro {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0 0 32px 0;
+}
+
+.rec-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rec-item {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.rec-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* Accent tags for categorization titles */
+.rec-item .category {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.rec-item .category.relationship {
+  background-color: #fee2e2; /* Soft Red Tint */
+  color: #991b1b;
+}
+
+.rec-item .category.collaboration {
+  background-color: #e0f2fe; /* Soft Blue Tint */
+  color: #0369a1;
+}
+
+.rec-item .category.problem-solving {
+  background-color: #fef3c7; /* Soft Amber Tint */
+  color: #92400e;
+}
+
+.rec-item .category.navigation {
+  background-color: #f3e8ff; /* Soft Purple Tint */
+  color: #6b21a8;
+}
+
+.rec-item blockquote {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.rec-item .author {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
   margin: 0;
 }
