@@ -345,3 +345,20 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
 }
 .card-green h3 { color: #15803d; }
 .card-green p { color: #14532d; }
+/* Enhanced Author & Role Formatting */
+.rec-item .author {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 6px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rec-item .author strong {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  color: #0f172a; /* Dark bold text for the name */
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
