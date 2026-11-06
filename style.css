@@ -89,12 +89,39 @@ Slate:   --bg:#ffffff;--card:#f4f5f6;--ink:#222222;--mut:#666666;--line:#e5e5e5;
   }
 }
 
+/* Colored Icon Container Styling */
 .work-item .icon {
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 1.1rem;
   font-weight: 700;
   font-family: monospace;
-  margin-bottom: 8px;
-  color: var(--text, #1c1c1e);
+  margin-bottom: 12px;
+}
+
+/* Individual Icon Accent Colors */
+.work-item:nth-child(1) .icon {
+  background: #fef3c7; /* Light Amber */
+  color: #d97706;      /* Bulb Yellow */
+}
+
+.work-item:nth-child(2) .icon {
+  background: #e0f2fe; /* Light Blue */
+  color: #0284c7;      /* Code Teal/Blue */
+}
+
+.work-item:nth-child(3) .icon {
+  background: #dcfce7; /* Light Green */
+  color: #16a34a;      /* Growth Green */
+}
+
+.work-item:nth-child(4) .icon {
+  background: #f3e8ff; /* Light Purple */
+  color: #9333ea;      /* Electric Purple */
 }
 
 .work-item h3 {
