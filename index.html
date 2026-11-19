@@ -21,7 +21,13 @@
     <p class="lead">I’m an enterprise customer success and strategic account management leader with 15+ years in SaaS, logistics, and technology. I’m now building hands-on AI projects that show how I’d apply it to retention, support, and operations.</p>
     <a class="btn" href="projects/customer-health-dashboard.html">Read the case study</a>
     <a class="btn o" href="https://claude.ai/artifact/G9qgFqvpJXeE5uY496uaYt" target="_blank">Open the live demo</a>
-  </div>
+  <div class="kim-ai-callout" onclick="openKimAgent()" role="button" tabindex="0">
+      <div class="kim-ai-callout-badge">AI CHIEF OF STAFF</div>
+      <div class="kim-ai-callout-body">
+        <strong>Ask Kim’s Chief of Staff →</strong>
+        <span>Get direct answers on Kim’s SaaS CS &amp; Ops wins, leadership style, or target roles.</span>
+      </div>
+    </div>
  </div>
     <div class="hero-visual-card">
       <div class="dots" role="img" aria-label="60 sample accounts: 32 healthy, 16 on watch, 12 needing a call"><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="r" title="needs a call"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="r" title="needs a call"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="r" title="needs a call"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="y" title="watch"></i><i class="r" title="needs a call"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="g" title="healthy"></i><i class="r" title="needs a call"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i><i class="g" title="healthy"></i><i class="y" title="watch"></i><i class="y" title="watch"></i><i class="g" title="healthy"></i></div>
@@ -168,4 +174,287 @@
 <p>I’m open to new roles in account management and customer success, program management, and business operations. The quickest way to reach me is a short email, or a message on LinkedIn.</p>
 <a class="btn" href="mailto:kimberlymadison05@gmail.com?subject=Opportunity%20for%20Kimberly">Email me</a><a class="btn o" href="https://www.linkedin.com/in/kimberly-madison-b375081b/">Message me on LinkedIn</a>
 </section>
-</main><footer>Kimberly Madison, San Francisco Bay Area. <a href="mailto:kimberlymadison05@gmail.com">kimberlymadison05@gmail.com</a> &nbsp; <a href="https://www.linkedin.com/in/kimberly-madison-b375081b/">LinkedIn</a> &nbsp; <a href="Kimberly_Madison_Resume.pdf">Resume (PDF)</a></footer></div></body></html>
+</main><footer>Kimberly Madison, San Francisco Bay Area. <a href="mailto:kimberlymadison05@gmail.com">kimberlymadison05@gmail.com</a> &nbsp; <a href="https://www.linkedin.com/in/kimberly-madison-b375081b/">LinkedIn</a> &nbsp; <a href="Kimberly_Madison_Resume.pdf">Resume (PDF)</a></footer></div><!-- Floating Launcher Button -->
+<button id="kim-chat-launcher" onclick="openKimAgent()" aria-label="Ask Kim's Chief of Staff">
+  ✨ Ask Kim’s Chief of Staff
+</button>
+
+<!-- Slide-Over Chat Panel -->
+<div id="kim-chat-modal" class="kim-hidden">
+  <div class="kim-chat-header">
+    <div>
+      <div class="kim-chat-title">Ask Kim’s Chief of Staff</div>
+      <div class="kim-chat-subtitle">Direct answers on Kim’s career, metrics &amp; fit</div>
+    </div>
+    <button onclick="closeKimAgent()" class="kim-chat-close" aria-label="Close chat">✕</button>
+  </div>
+
+  <div id="kim-chat-messages">
+    <div class="kim-msg kim-bot">
+      Hi! I’m Kim’s AI Chief of Staff. Ask me about her track record cutting churn from 17% to 5%, leading $100M+ enterprise portfolios, her AI builds, or what she’s looking for next.
+    </div>
+    <div class="kim-starter-chips" id="kim-starters">
+      <button onclick="sendQuickPrompt('What are Kim’s biggest quantifiable career wins?')">Top career wins</button>
+      <button onclick="sendQuickPrompt('Tell me about Kim’s AI automation and portfolio projects.')">AI &amp; automation work</button>
+      <button onclick="sendQuickPrompt('What kind of role and company is Kim looking for next?')">Target roles &amp; fit</button>
+      <button onclick="sendQuickPrompt('How has being a D1 athlete shaped Kim’s leadership?')">Leadership style</button>
+    </div>
+  </div>
+
+  <form id="kim-chat-form" onsubmit="handleKimSubmit(event)">
+    <input id="kim-chat-input" type="text" placeholder="Ask about Kim’s experience..." autocomplete="off" required />
+    <button type="submit" id="kim-chat-send">Send</button>
+  </form>
+</div>
+
+<style>
+  .kim-ai-callout {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    margin-top: 22px;
+    max-width: 560px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, 0.18);
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .kim-ai-callout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+  }
+  .kim-ai-callout-badge {
+    background: #111827;
+    color: #ffffff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .kim-ai-callout-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .kim-ai-callout-body strong {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+  }
+  .kim-ai-callout-body span {
+    font-family: 'Source Serif 4', serif;
+    font-size: 13.5px;
+    color: #4b5563;
+    line-height: 1.35;
+  }
+  #kim-chat-launcher {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 9998;
+    background: #111827;
+    color: #ffffff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    border: none;
+    border-radius: 999px;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.25);
+    transition: transform 0.2s ease;
+  }
+  #kim-chat-launcher:hover {
+    transform: translateY(-2px);
+  }
+  #kim-chat-modal {
+    position: fixed;
+    bottom: 80px;
+    right: 22px;
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    height: 510px;
+    max-height: calc(100vh - 110px);
+    background: #ffffff;
+    color: #111827;
+    border-radius: 16px;
+    box-shadow: 0 18px 45px rgba(17, 24, 39, 0.22);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  #kim-chat-modal.kim-hidden {
+    display: none;
+  }
+  .kim-chat-header {
+    background: #111827;
+    color: #ffffff;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .kim-chat-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 15.5px;
+  }
+  .kim-chat-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-size: 12px;
+    opacity: 0.85;
+  }
+  .kim-chat-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #kim-chat-messages {
+    flex: 1;
+    padding: 14px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f9fafb;
+    font-family: 'Source Serif 4', serif;
+  }
+  .kim-msg {
+    padding: 10px 13px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.45;
+    max-width: 86%;
+    white-space: pre-wrap;
+  }
+  .kim-bot {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    align-self: flex-start;
+  }
+  .kim-user {
+    background: #111827;
+    color: #ffffff;
+    align-self: flex-end;
+  }
+  .kim-starter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .kim-starter-chips button {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    padding: 6px 11px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #1f2937;
+    transition: background 0.15s;
+  }
+  .kim-starter-chips button:hover {
+    background: #f3f4f6;
+  }
+  #kim-chat-form {
+    display: flex;
+    border-top: 1px solid #e5e7eb;
+    padding: 10px;
+    background: #ffffff;
+    gap: 8px;
+  }
+  #kim-chat-input {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    outline: none;
+  }
+  #kim-chat-send {
+    background: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 14px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const KIM_AGENT_ENDPOINT = "https://kim-portfolio-agent.kimberlymadison05.workers.dev";
+  const kimHistory = [];
+
+  function openKimAgent() {
+    document.getElementById("kim-chat-modal").classList.remove("kim-hidden");
+    document.getElementById("kim-chat-input").focus();
+  }
+
+  function closeKimAgent() {
+    document.getElementById("kim-chat-modal").classList.add("kim-hidden");
+  }
+
+  function appendKimMessage(text, sender) {
+    const container = document.getElementById("kim-chat-messages");
+    const div = document.createElement("div");
+    div.className = `kim-msg ${sender === "user" ? "kim-user" : "kim-bot"}`;
+    div.textContent = text;
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+    return div;
+  }
+
+  function sendQuickPrompt(text) {
+    const starters = document.getElementById("kim-starters");
+    if (starters) starters.remove();
+    submitKimMessage(text);
+  }
+
+  function handleKimSubmit(e) {
+    e.preventDefault();
+    const input = document.getElementById("kim-chat-input");
+    const text = input.value.trim();
+    if (!text) return;
+    input.value = "";
+    const starters = document.getElementById("kim-starters");
+    if (starters) starters.remove();
+    submitKimMessage(text);
+  }
+
+  async function submitKimMessage(text) {
+    appendKimMessage(text, "user");
+    kimHistory.push({ role: "user", content: text });
+    const loadingDiv = appendKimMessage("Thinking...", "bot");
+
+    try {
+      const res = await fetch(KIM_AGENT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: kimHistory }),
+      });
+      const data = await res.json();
+      loadingDiv.textContent = data.reply;
+      kimHistory.push({ role: "assistant", content: data.reply });
+    } catch (err) {
+      loadingDiv.textContent =
+        "I couldn't connect right now—please email Kim directly at kimberlymadison05@gmail.com!";
+    }
+  }
+</script></body></html>
