@@ -48,13 +48,25 @@
       </div>
     </div>
 
-    <!-- PROOF METRICS -->
+  <!-- PROOF METRICS -->
     <section>
-      <ul class="proof">
-        <li><b>$100M+</b><span>Revenue overseen across 65 enterprise clients</span></li>
-        <li><b>17% to 5%</b><span>Churn reduced through customer health insights and feedback loops</span></li>
-        <li><b>90%</b><span>Faster response times, with 40% more team capacity, from AI-enabled support automation</span></li>
-        <li><b>25%</b><span>Faster delivery after a company-wide operational gap analysis exposed systemic inefficiencies and led to process improvements</span></li>
+      <ul class="proof-strip">
+        <li>
+          <b style="color:#14213d;">$100M+</b>
+          <span>Revenue overseen across 65 enterprise clients</span>
+        </li>
+        <li>
+          <b style="color:#16a34a;">17% to 5%</b>
+          <span>Churn reduced through health insights &amp; feedback loops</span>
+        </li>
+        <li>
+          <b style="color:#0e7c86;">90%</b>
+          <span>Faster response times (+40% capacity) via AI automation</span>
+        </li>
+        <li>
+          <b style="color:#d97706;">25%</b>
+          <span>Faster delivery from company-wide operational gap analysis</span>
+        </li>
       </ul>
     </section>
 
@@ -692,6 +704,56 @@
     font-weight: 600;
     font-size: 13px;
     cursor: pointer;
+  }
+  /* Compact 4-Column Horizontal Proof Strip */
+  .proof-strip {
+    list-style: none;
+    margin: 28px 0 36px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .proof-strip li {
+    padding: 4px 20px;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .proof-strip li:first-child {
+    padding-left: 0;
+  }
+  .proof-strip li:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  .proof-strip b {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .proof-strip span {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #4b5563;
+  }
+  @media (max-width: 768px) {
+    .proof-strip {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px 0;
+    }
+    .proof-strip li:nth-child(2n) {
+      border-right: none;
+      padding-right: 0;
+    }
+    .proof-strip li:nth-child(odd) {
+      padding-left: 0;
+    }
   }
 </style>
 
